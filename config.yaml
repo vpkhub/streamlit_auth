@@ -1,0 +1,27 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@example.com
+      name: admin
+      password: $2b$12$cErERCv9jQbhi9p3Cml.SO8.OLQdJMVEMBe3kDT1/76bivzKMa8A.  # Use hashed password here
+    user:
+      email: user@example.com
+      name: user1
+      password: $2b$12$uMFPlQDnfmzZEN/0Y4Mnbe4t9qHSZdoDFADa8jfhPt4OamvDUbPnq  # Use hashed password here
+
+cookie:
+  expiry_days: 30
+  key: some_random_cookie_key
+  name: some_random_cookie_name
+
+preauthorized:
+  emails:
+    - preauthorized@example.com
+
+database:
+  dbname: user_management
+  user: postgres
+  password: mysecretpassword
+  host: localhost
+  port: 5432
+

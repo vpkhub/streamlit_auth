@@ -120,5 +120,3 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Postgres configuration
-config.yaml
