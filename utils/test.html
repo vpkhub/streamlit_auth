@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT with Streaming Response</title>
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('message').value;
+            const chatBox = document.getElementById('chat-box');
+            const eventSource = new EventSource('/chat?message=' + message);
+            eventSource.onmessage = function(event) {
+                chatBox.value += event.data;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            };
+        }
+    </script>
+</head>
+<body>
+    <h1>ChatGPT with Streaming Response</h1>
+    <textarea id="chat-box" rows="20" cols="100" readonly></textarea><br>
+    <input type="text" id="message" placeholder="Type your message here">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>
